@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div id="content">
+
+    <form action="/loginNow" method="post" class="form-container">
+        <div class="form-title"><h1>Login</h1></div>
+        <a href="/">Need to Register?</a><br><br>
+
+        <div class="form-title">Email</div>
+        <input type="text" name="LEmail" class="form-field"/>
+
+        <div class="form-title">Password</div>
+        <input type="password" name="Password" class="form-field"/>
+
+        <div class="submit-container"><input type="submit" value="Submit" class="submit-button"/></div>
+        <span id="err">@ViewBag.ErrorLogin @ViewBag.NiceTry</span>
+    </form>
+
+</div>

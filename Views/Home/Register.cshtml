@@ -1,0 +1,34 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model BankAccounts.Models.RegisterViewModel
+<div id="content">
+
+    <form asp-controller="Home" asp-action="Create" method="post" class="form-container">
+        <div class="form-title"><h1>Register</h1></div>
+        <a href="/login">Already registered?</a><br><br>
+        
+        <div class="form-title">First Name</div>
+        <input asp-for="FirstName" class="form-field"/>
+        <span asp-validation-for="FirstName"></span>
+        
+        <div class="form-title">Last Name</div>
+        <input asp-for="LastName" class="form-field"/>
+        <span asp-validation-for="LastName"></span>
+    
+        <div class="form-title">Email Name</div>
+        
+        <input asp-for="Email" class="form-field"/>
+        <span asp-validation-for="Email"><span id="err">@ViewBag.ErrorRegister</span></span>
+
+        <div class="form-title">Password</div>
+        <input asp-for="Password" class="form-field"/>
+        <span asp-validation-for="Password"></span>
+
+        <div class="form-title">Confirm Password</div>
+        <input asp-for="ConfirmPassword" class="form-field"/>
+        <span asp-validation-for="ConfirmPassword"></span>
+
+        <div class="submit-container"><input type="submit" value="Submit" class="submit-button"/></div>
+    </form>
+</div>
